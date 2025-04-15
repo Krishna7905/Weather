@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Futuristic Weather App</title>
+    <!-- Futuristic font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated Gradient Background -->
+    <div class="background-layer"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <header>
+        <h1>Weather Forecast</h1>
+      </header>
+
+      <div class="search-wrapper">
+        <input
+          type="text"
+          placeholder="Enter city name"
+          autocomplete="off"
+        />
+        <button id="search-btn">Search</button>
+      </div>
+      <div class="error-message">City not found!</div>
+
+      <!-- Weather details container (hidden by default) -->
+      <div class="weather-card">
+        <div class="weather-header">
+          <h2 class="city">City</h2>
+          <div class="weather-info">
+            <img
+              src="clear.png"
+              alt="Weather Icon"
+              class="weather-icon"
+            />
+            <div class="temp-details">
+              <span class="temperature">--°C</span>
+              <span class="weather-condition">--</span>
+            </div>
+          </div>
+        </div>
+        <div class="weather-details">
+          <div class="details-item">
+            <img src="humidity.png" alt="Humidity" />
+            <span class="humidity">--%</span>
+          </div>
+          <div class="details-item">
+            <img src="wind.png" alt="Wind" />
+            <span class="wind">-- Km/h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
