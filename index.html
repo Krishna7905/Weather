@@ -1,68 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
-    <title>Futuristic Weather App</title>
-    <!-- Futuristic font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Animated Gradient Background -->
-    <div class="background-layer"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Futuristic Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background"></div>
 
-    <!-- Main Container -->
-    <div class="container">
-      <header>
-        <h1>Weather Forecast</h1>
-      </header>
+  <main class="container">
+    <header>
+      <h1>Weather Forecast</h1>
+    </header>
 
-      <div class="search-wrapper">
-        <input
-          type="text"
-          placeholder="Enter city name"
-          autocomplete="off"
-        />
-        <button id="search-btn">Search</button>
-      </div>
-      <div class="error-message">City not found!</div>
+    <section class="search">
+      <input type="text" placeholder="Enter city name..." autocomplete="off" />
+      <button id="search-btn">Search</button>
+    </section>
 
-      <!-- Weather details container (hidden by default) -->
-      <div class="weather-card">
-        <div class="weather-header">
-          <h2 class="city">City</h2>
-          <div class="weather-info">
-            <img
-              src="clear.png"
-              alt="Weather Icon"
-              class="weather-icon"
-            />
-            <div class="temp-details">
-              <span class="temperature">--°C</span>
-              <span class="weather-condition">--</span>
-            </div>
-          </div>
-        </div>
-        <div class="weather-details">
-          <div class="details-item">
-            <img src="humidity.png" alt="Humidity" />
-            <span class="humidity">--%</span>
-          </div>
-          <div class="details-item">
-            <img src="wind.png" alt="Wind" />
-            <span class="wind">-- Km/h</span>
-          </div>
+    <p class="error-message"></p>
+
+    <section class="weather-card" style="display:none;">
+      <h2 class="city"></h2>
+      <div class="weather-main">
+        <img class="weather-icon" alt="Weather Icon" />
+        <div class="temp-condition">
+          <p class="temperature"></p>
+          <p class="condition"></p>
         </div>
       </div>
-    </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div class="detail">
+  <!-- Humidity droplet icon -->
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#00e6e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2C12 2 7 8 7 12a5 5 0 0 0 10 0c0-4-5-10-5-10z"/>
+    <path d="M12 14a2 2 0 0 1 0-4 2 2 0 0 1 0 4z"/>
+  </svg>
+  <p><span class="humidity"></span>% Humidity</p>
+</div>
+
+<div class="detail">
+  <!-- Wind icon -->
+  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#00e6e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 12h12a3 3 0 1 1 0 6h-1"/>
+    <path d="M4 16h8a1 1 0 1 0 0-2H5"/>
+  </svg>
+  <p><span class="wind"></span> Km/h Wind</p>
+</div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
